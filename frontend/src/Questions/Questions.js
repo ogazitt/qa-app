@@ -35,7 +35,9 @@ class Questions extends Component {
           </div>
 
           {this.state.questions === null && <p>Loading questions...</p>}
+          { console.log(this.state.questions) }
           {
+            
             this.state.questions && this.state.questions.map(question => (
               <div key={question.id} className="col-sm-12 col-md-4 col-lg-3">
                 <Link to={`/question/${question.id}`}>
@@ -44,6 +46,7 @@ class Questions extends Component {
                     <div className="card-body">
                       <h4 className="card-title">{question.title}</h4>
                       <p className="card-text">{question.description}</p>
+                      Asked by: <p className="card-text">{question.author}</p>
                     </div>
                   </div>
                 </Link>

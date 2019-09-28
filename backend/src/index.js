@@ -32,6 +32,7 @@ app.get('/', (req, res) => {
     id: q.id,
     title: q.title,
     description: q.description,
+    author: q.author,
     answers: q.answers.length,
   }));
   res.send(qs);

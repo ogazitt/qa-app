@@ -48,7 +48,7 @@ class Question extends Component {
             <p>Answers:</p>
             {
               question.answers.map((answer, idx) => (
-                <p className="lead" key={idx}>{answer.answer}</p>
+                <p className="lead" key={idx}>{answer.answer} (answered by: {answer.author})</p>
               ))
             }
           </div>
